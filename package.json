@@ -1,0 +1,15 @@
+{
+  "name": "be-the-hero",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "addserver": "yarn workspace server add",
+    "server": "yarn workspace server dev",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
