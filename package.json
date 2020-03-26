@@ -5,11 +5,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "addserver": "yarn workspace server add",
-    "server": "yarn workspace server dev",
-    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\""
+    "addserver": "yarn workspace @be-the-hero/server add",
+    "server": "yarn workspace @be-the-hero/server dev",
+    "web": "yarn workspace @be-the-hero/web start",
+    "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn web\""
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/clients/*"
   ]
 }
